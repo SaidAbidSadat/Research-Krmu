@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSafe - Cyberbullying Text Classifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="container">
+                <h1 class="app-title">🛡️ CyberSafe</h1>
+                <p class="app-subtitle">Cyberbullying Text Classifier</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container">
+                <!-- Input Section -->
+                <div class="input-section card">
+                    <div class="card__body">
+                        <h2>Text Analysis</h2>
+                        <div class="form-group">
+                            <label for="textInput" class="form-label">Enter text to analyze for cyberbullying content:</label>
+                            <textarea 
+                                id="textInput" 
+                                class="form-control text-input" 
+                                placeholder="Type or paste the text you want to analyze here..."
+                                rows="6"
+                            ></textarea>
+                            <div class="input-footer">
+                                <span id="charCount" class="char-count">0 characters</span>
+                                <div class="input-actions">
+                                    <button id="clearBtn" class="btn btn--outline btn--sm">Clear</button>
+                                    <button id="analyzeBtn" class="btn btn--primary">Analyze Text</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div id="resultsSection" class="results-section card" style="display: none;">
+                    <div class="card__body">
+                        <h2>Analysis Results</h2>
+                        <div id="resultsContent">
+                            <!-- Results will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistics Dashboard -->
+                <div class="stats-section">
+                    <div class="stats-grid">
+                        <div class="stat-card card">
+                            <div class="card__body">
+                                <h3>Total Analyses</h3>
+                                <div id="totalCount" class="stat-number">0</div>
+                            </div>
+                        </div>
+                        <div class="stat-card card">
+                            <div class="card__body">
+                                <h3>Cyberbullying Detected</h3>
+                                <div id="positiveCount" class="stat-number text-danger">0</div>
+                            </div>
+                        </div>
+                        <div class="stat-card card">
+                            <div class="card__body">
+                                <h3>Clean Text</h3>
+                                <div id="negativeCount" class="stat-number text-success">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- History Section -->
+                <div class="history-section card">
+                    <div class="card__body">
+                        <h2>Recent Analysis History</h2>
+                        <div id="historyList" class="history-list">
+                            <p class="text-muted">No analyses performed yet.</p>
+                        </div>
+                        <button id="clearHistoryBtn" class="btn btn--outline btn--sm">Clear History</button>
+                    </div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="info-section card">
+                    <div class="card__body">
+                        <h2>How It Works</h2>
+                        <p>This cyberbullying detector uses advanced pattern recognition to analyze text for harmful content including:</p>
+                        <ul>
+                            <li><strong>Threats & Violence:</strong> Direct or implied threats of harm</li>
+                            <li><strong>Harassment:</strong> Repeated hostile or aggressive behavior</li>
+                            <li><strong>Discrimination:</strong> Content targeting protected characteristics</li>
+                            <li><strong>Exclusion:</strong> Language designed to isolate or ostracize</li>
+                            <li><strong>Offensive Language:</strong> Profanity and derogatory terms</li>
+                        </ul>
+                        <div class="privacy-notice">
+                            <h3>Privacy Notice</h3>
+                            <p>All text analysis is performed locally in your browser. No data is sent to external servers, ensuring complete privacy and security.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="container">
+                <p>&copy; 2025 CyberSafe - College Project | Cyberbullying Detection System</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
