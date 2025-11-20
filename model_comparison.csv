@@ -1,0 +1,5 @@
+Model,Accuracy,Training Time (seconds)
+BERT,0.8725,5400.0
+Logistic Regression,0.8608,0.22
+SVM,0.8515,0.27
+Random Forest,0.8454,20.49
